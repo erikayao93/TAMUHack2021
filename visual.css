@@ -1,0 +1,97 @@
+body{
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Georgia;
+}
+
+mainHeader{
+    background:no-repeat center bottom scroll;
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 150px;
+    padding-top: 2%;
+    font-size:100%;
+}
+
+h1{
+    text-align: center;
+    color: rgb(00, 00, 00);
+}
+
+p{
+    margin: 20px;
+    text-align: center;
+    color: rgb(00, 00, 00);
+}
+
+.playSelection{
+    background: url('slide.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    height: 350px;
+    width: 350px;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.docSelection{
+    background: url('stethoscope.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    height: 350px;
+    width: 350px;
+    float: right;
+    margin-top: 10%;
+    margin-right: 20%;
+}
+
+.selector{
+    display: block;
+}
+
+.doctor{
+    display: none;
+    height: 80%;
+}
+
+.playground{
+    display: none;
+    height: 80%
+}
+
+.backButton{
+    margin-top: 0px;
+    margin-left: 10%;
+    height: 30px;
+    width: 10%;
+}
+
+.contButton{
+    margin-top: 0px;
+    margin-left: 35%;
+    height: 30px;
+    width: 10%;
+}
+
+.docQuestions{
+    display: none;
+}
+
+.playQuestions{
+    display: none;
+}
+
+.choice{
+    margin-left: 16%;
+    height: 25px;
+    width: 5%;
+}
+
+.playChoice{
+    margin-left: 30%;
+    height: 25px;
+    width: 5%;
+}

@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <title> COVID Prevention Exploration </title>
+        <link rel = "stylesheet" href = "visual.css">
+        <script src = "http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            hideSelector = null;
+            showSelector = null;
+            showDoc = null;
+            hideDoc = null;
+            showPlay = null;
+            hidePlay = null;
+            hideDocQ = null;
+            showDocQ = null;
+            hidePlayQ = null;
+            showPlayQ = null;
+
+            $(document).ready(function(){
+                var selectorSeg = $('.selector');
+                var docSeg = $('.doctor');
+                var playSeg = $('.playground');
+                var bodySeg = $('body');
+                var docQs = $('.docQuestions');
+                var playQs = $('.playQuestions');
+
+                function hideSelectorSeg(){
+                    selectorSeg.css('display', "none");
+                }
+                hideSelector = hideSelectorSeg;
+
+                function showSelectorSeg(){
+                    bodySeg.css('background-image', "null");
+                    selectorSeg.css('display', "block");
+                }
+                showSelector = showSelectorSeg;
+
+                function showDocSeg(){
+                    docSeg.css('display', "block");
+                    bodySeg.css('background-image', "url('doctor.jpg')");
+                }
+                showDoc = showDocSeg;
+
+                function hideDocSeg(){
+                    docSeg.css('display', "none");
+                }
+                hideDoc = hideDocSeg;
+
+                function showPlaySeg(){
+                    playSeg.css('display', "block");
+                    bodySeg.css('background-image', "url('playground.jpg')");
+                }
+                showPlay = showPlaySeg;
+
+                function hidePlaySeg(){
+                    playSeg.css('display', "none");
+                }
+                hidePlay = hidePlaySeg;
+
+                function showDocQSeg(){
+                    docQs.css('display', "block");
+                }
+                showDocQ = showDocQSeg;
+
+                function hideDocQSeg(){
+                    docQs.css('display', "none");
+                }
+                hideDocQ = hideDocQSeg;
+
+                function showPlayQSeg(){
+                    playQs.css('display', "block");
+                }
+                showPlayQ = showPlayQSeg;
+
+                function hidePlayQSeg(){
+                    playQs.css('display', "none");
+                }
+                hidePlayQ = hidePlayQSeg;
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class = "banner">
+            <h1 id = "covid"> COVID Percentage: </h1>
+
+        </div>
+
+        <div class = "selector">
+            <p> Where do you want to go? </p>
+            <button id = "doc" class = "docSelection" onclick = "doctor()"></button>
+            <button id = "play" class = "playSelection" onclick = "playground()"></button>
+        </div>
+
+        <div class = "doctor">
+            <p> Welcome to the doctor's office! </p>
+            <p> Would you like to answer some questions? </p>
+            <button id = "dCont" class = "contButton" onclick = "docGame()"> Continue </button>
+            <button id = "back" class = "backButton" onclick = "home()"> Back </button>
+        </div>
+
+        <div class = "playground">
+            <p> Welcome to the playground! </p>
+            <p> Would you like to answer some questions? </p>
+            <button id = "pCont" class = "contButton" onclick = "playGame()"> Continue </button>
+            <button id = "back" class = "backButton" onclick = "home()"> Back </button>
+        </div>
+
+        <div class = "docQuestions">
+            <p id = "dStreak">
+                Correct Answer Streak: 
+            </p>
+            <p id = "dQuestion">
+                Question: 
+            </p>
+            <p id = "dDisplay">
+                quesiton goes here
+            </p>
+            <button id = "A" class = "choice" onclick = "docAnswer('A')"> A </button>
+            <button id = "B" class = "choice" onclick = "docAnswer('B')"> B </button>
+            <button id = "C" class = "choice" onclick = "docAnswer('C')"> C </button>
+            <button id = "D" class = "choice" onclick = "docAnswer('D')"> D </button>
+        </div>
+
+        <div class = "playQuestions">
+            <p id = "pStreak">
+                 awerfasdvatgfasf
+            </p>
+            <p id = "pQuestion">
+                Question: 
+            </p>
+            <p id = "pDisplay">
+                quesiton goes here
+            </p>
+            <button id = "true" class = "playChoice" onclick = "playAnswer('True')"> True </button>
+            <button id = "true" class = "playChoice" onclick = "playAnswer('False')"> False </button>
+        </div>
+
+        <script src="covidGame.js"></script>
+    </body>
+</html>
